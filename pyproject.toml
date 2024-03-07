@@ -3,7 +3,15 @@ name = "PMYning"
 version = "0.1.0"
 description = "A process mining tool"
 authors = ["Willem Bressers <dhr.bressers@gmail.com>"]
-readme = "README.md"
+readme = "docs/index.md"
+license = "MIT"
+homepage = "https://willembressers.github.io/pmyning"
+documentation = "https://willembressers.github.io/pmyning"
+repository = "https://github.com/willembressers/pmyning"
+keywords = ["process","mining"]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/willembressers/pmyning/issues"
 
 [tool.poetry.dependencies]
 python = "^3.11"

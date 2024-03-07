@@ -1,7 +1,3 @@
-"""
-``pmyning.io.xes`` is a module for reading XES.
-"""
-
 # python core packages
 from pathlib import Path
 
@@ -12,6 +8,10 @@ from opyenxes.data_in.XUniversalParser import XUniversalParser
 
 def read_xes(file_path: Path) -> pd.DataFrame:
     """Reads the given file path into pandas DataFrame.
+
+    Examples:
+        >>> import pmyning as pmy
+        >>> df = pmy.read_xes(Path("assets/general_example.xes"))
 
     Parameters
     ----------

@@ -1,17 +1,19 @@
-# Welcome to MkDocs
+# Welcome to PMYning
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+This package aims to lower the barier for data scientist to get started with process mining.
 
-## Commands
+## Installation
+Install via PyPI
+```shell
+pip install pmyning
+```
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+Install via Poetry
+```shell
+poetry add pmyning
+```
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Install via Conda
+```shell
+conda install -c conda-forge pmyning
+```

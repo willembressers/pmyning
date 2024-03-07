@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Release Notes - PMYning</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Release Notes";
+        var mkdocs_page_input_path = "about/release-notes.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> PMYning
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="../../api/index.md">API</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../license/">License</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Release Notes</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#version-153-2023-09-18">Version 1.5.3 (2023-09-18)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#version-152-2023-08-02">Version 1.5.2 (2023-08-02)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#version-0100-2014-10-29">Version 0.10.0 (2014-10-29)</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mkdocs/">mkdocs</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">PMYning</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">About</li>
+      <li class="breadcrumb-item active">Release Notes</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="release-notes">Release Notes</h1>
+<p>Below are some examples (of the mkdocs package) of how we can keep track of changes.</p>
+<hr />
+<h2 id="version-153-2023-09-18">Version 1.5.3 (2023-09-18)</h2>
+<ul>
+<li>Fix <code>mkdocs serve</code> sometimes locking up all browser tabs when navigating quickly (#3390)</li>
+<li>Add many new supported languages for "search" plugin - update lunr-languages to 1.12.0 (#3334)</li>
+<li>Bugfix (regression in 1.5.0): In "readthedocs" theme the styling of "breadcrumb navigation" was broken for nested pages (#3383)</li>
+<li>Built-in themes now also support Chinese (Traditional, Taiwan) language (#3154)</li>
+<li>Plugins can now set <code>File.page</code> to their own subclass of <code>Page</code>. There is also now a warning if <code>File.page</code> is set to anything other than a strict subclass of <code>Page</code>. (#3367, #3381)
+    Note that just instantiating a <code>Page</code> <a href="https://github.com/mkdocs/mkdocs/blob/f94ab3f62d0416d484d81a0c695c8ca86ab3b975/mkdocs/structure/pages.py#L34">sets the file automatically</a>, so care needs to be taken not to create an unneeded <code>Page</code>.</li>
+</ul>
+<p>Other small improvements; see <a href="https://github.com/mkdocs/mkdocs/compare/1.5.2...1.5.3">commit log</a>.</p>
+<h2 id="version-152-2023-08-02">Version 1.5.2 (2023-08-02)</h2>
+<ul>
+<li>Bugfix (regression in 1.5.0): Restore functionality of <code>--no-livereload</code>. (#3320)</li>
+<li>Bugfix (regression in 1.5.0): The new page title detection would sometimes be unable to drop anchorlinks - fix that. (#3325)</li>
+<li>Partly bring back pre-1.5 API: <code>extra_javascript</code> items will once again be mostly strings, and only sometimes <code>ExtraScriptValue</code> (when the extra <code>script</code> functionality is used).
+    Plugins should be free to append strings to <code>config.extra_javascript</code>, but when reading the values, they must still make sure to read it as <code>str(value)</code> in case it is an <code>ExtraScriptValue</code> item. For querying the attributes such as <code>.type</code> you need to check <code>isinstance</code> first. Static type checking will guide you in that. (#3324)</li>
+</ul>
+<p>See <a href="https://github.com/mkdocs/mkdocs/compare/1.5.1...1.5.2">commit log</a>.</p>
+<h2 id="version-0100-2014-10-29">Version 0.10.0 (2014-10-29)</h2>
+<ul>
+<li>Added support for Python 3.3 and 3.4. (#103)</li>
+<li>Configurable Python-Markdown extensions with the config setting <code>markdown_extensions</code>. (#74)</li>
+<li>Added <code>mkdocs json</code> command to output your rendered documentation as json files. (#128)</li>
+<li>Added <code>--clean</code> switch to <code>build</code>, <code>json</code> and <code>gh-deploy</code> commands to remove stale files from the output directory. (#157)</li>
+<li>Support multiple theme directories to allow replacement of individual templates rather than copying the full theme. (#129)</li>
+<li>Bugfix: Fix <code>&lt;ul&gt;</code> rendering in readthedocs theme. (#171)</li>
+<li>Bugfix: Improve the readthedocs theme on smaller displays. (#168)</li>
+<li>Bugfix: Relaxed required python package versions to avoid clashes. (#104)</li>
+<li>Bugfix: Fix issue rendering the table of contents with some configs. (#146)</li>
+<li>Bugfix: Fix path for embedded images in sub pages. (#138)</li>
+<li>Bugfix: Fix <code>use_directory_urls</code> config behavior. (#63)</li>
+<li>Bugfix: Support <code>extra_javascript</code> and <code>extra_css</code> in all themes. (#90)</li>
+<li>Bugfix: Fix path-handling under Windows. (#121)</li>
+<li>Bugfix: Fix the menu generation in the readthedocs theme. (#110)</li>
+<li>Bugfix: Fix the mkdocs command creation under Windows. (#122)</li>
+<li>Bugfix: Correctly handle external <code>extra_javascript</code> and <code>extra_css</code>. (#92)</li>
+<li>Bugfix: Fixed favicon support. (#87)</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../license/" class="btn btn-neutral float-left" title="License"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../mkdocs/" class="btn btn-neutral float-right" title="mkdocs">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../license/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../mkdocs/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
