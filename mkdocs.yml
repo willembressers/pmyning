@@ -1,0 +1,21 @@
+site_name: PMYning
+
+nav:
+  - Home: index.md
+  - Code Reference: reference/
+  - About:
+    - License: about/license.md
+    - Release Notes: about/release-notes.md
+    - mkdocs: about/mkdocs.md
+
+theme:
+  name: readthedocs
+
+plugins:
+  - search
+  - gen-files:
+      scripts:
+      - scripts/gen_ref_pages.py
+  - literate-nav:
+      nav_file: SUMMARY.md
+  - mkdocstrings

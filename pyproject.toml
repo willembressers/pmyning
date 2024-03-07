@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "PMYning"
+version = "0.1.0"
+description = "A process mining tool"
+authors = ["Willem Bressers <dhr.bressers@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+opyenxes = "^0.3.0"
+pandas = "^2.2.1"
+install = "^1.3.5"
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.5.3"
+mkdocs-gen-files = "^0.5.0"
+mkdocs-literate-nav = "^0.6.1"
+mkdocstrings = {extras = ["python"], version = "^0.24.1"}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
