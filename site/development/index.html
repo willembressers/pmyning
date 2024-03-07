@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://willembressers.github.io/pmyning/development/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
     <title>Development - PMYning</title>
     <link rel="stylesheet" href="../css/theme.css" />
@@ -15,7 +15,7 @@
         // Current page data
         var mkdocs_page_name = "Development";
         var mkdocs_page_input_path = "development.md";
-        var mkdocs_page_url = null;
+        var mkdocs_page_url = "/pmyning/development/";
       </script>
     
     <!--[if lt IE 9]>
@@ -96,6 +96,9 @@
 <h2 id="documentation">Documentation</h2>
 <p>Good code documentation will automatically lead to good documentation, so let's update the documentation.</p>
 <pre><code class="language-console">poetry run mkdocs serve
+</code></pre>
+<p>publish the code to github pages</p>
+<pre><code class="language-console">poetry run mkdocs gh-pages
 </code></pre>
 <h2 id="tests">Tests</h2>
 <p>Run the unittests</p>

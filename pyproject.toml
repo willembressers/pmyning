@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "PMYning"
-version = "0.1.0"
+version = "0.1.1"
 description = "A process mining tool"
 authors = ["Willem Bressers <dhr.bressers@gmail.com>"]
 readme = "docs/index.md"

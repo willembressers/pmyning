@@ -9,7 +9,7 @@ poetry run mkdocs serve
 
 publish the code to github pages
 ```console
-poetry run mkdocs gh-pages
+poetry run mkdocs gh-deploy
 ```
 
 ## Tests
@@ -21,7 +21,7 @@ poetry run python -m unittest discover
 ## Publication
 First we need to bump the version number.
 ```console
-poetry version 0.0.2
+poetry version 0.1.1
 ```
 
 Now we can build the sdist & wheel.
